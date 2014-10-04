@@ -46,7 +46,7 @@ Cell* Maze::processBackTrack(StackLinked<Cell>* stack)
    //top_cell is NULL if the stack is empty
    //top_cell's direction is DEAD_END if you need to keep backtracking
 
-   while (                                        )  //need to back track
+   while (top_cell->getDir() == DEAD_END )  //need to back track
    {
       
 
@@ -136,7 +136,7 @@ bool Maze::traverse()
 
       //call a method in the Cell class to give you a new Cell in a new direction relative to top_cell (initially, DOWN)
       //DO THIS
-      Cell* curr_cell = 
+      Cell* curr_cell = top_cell->nextCell();
 
 
 
@@ -148,8 +148,8 @@ bool Maze::traverse()
 
       //DO THIS
       //get the row and col from curr_cell
-      int row = 
-      int col = 
+      int row = curr_cell->getRow();
+      int col = curr_cell->getCol();
 
       //check that the current cell corresponds to SPACE, otherwise delete it
       if (                                           )
