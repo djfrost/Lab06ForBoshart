@@ -77,13 +77,10 @@ int main(int argc, char** argv)
    Gtk::Button btnMaze("Solve!");
 
    btnMaze.signal_clicked().connect(sigc::mem_fun(mg, &MazeGUI::on_maze_button_click_event));
-
    tbl.attach(mg, 0, 1, 0, 9, Gtk::FILL | Gtk::EXPAND, Gtk::FILL | Gtk::EXPAND, 0, 0);
    tbl.attach(btnMaze, 0, 1, 9, 10, Gtk::FILL | Gtk::EXPAND, Gtk::FILL | Gtk::EXPAND, 0, 0);
    win.add(tbl);
-
    win.show_all_children();
    Gtk::Main::run(win);
-
    return 0;
 }

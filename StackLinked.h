@@ -101,6 +101,7 @@ T* StackLinked<T>::pop()
 	NextNode<T>* next = top->getNext();
 	delete top;
 	top = next;
+	sze--;
 
 
 
